@@ -44,7 +44,7 @@ func run(part2 bool, input string) any {
 		for scanner.Scan() {
 			var numbers []string
 			line := scanner.Text()
-			for i, _ := range line {
+			for i := range line {
 				numberInString := re.FindString(line[i:])
 				if numberInString != "" {
 					numbers = append(numbers, numberInString)
